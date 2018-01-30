@@ -27,8 +27,8 @@ COPY patches patches
 RUN git clone "https://github.com/martin-gorner/tensorflow-mnist-tutorial.git"
 
 # patch the mnist_1.0_softmax.py script to disable animations
-RUN cd "${WORKDIR}" \
-	&& patch -N -p1 < "/patches/mnist_1.0_softmax.py.patch"
+# RUN cd "${WORKDIR}" \
+# 	&& patch -N -p1 < "/patches/mnist_1.0_softmax.py.patch"
 
 WORKDIR "${WORKDIR}"
 
